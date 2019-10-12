@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// import '../Search.dart';
+
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
 
@@ -9,6 +11,19 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Text("我是首页组件");
+    return Center(
+      child: RaisedButton(
+          child: Text("跳转到搜索页面"),
+          onPressed: () {
+            //普通路由
+            // Navigator.of(context)
+            // .push(MaterialPageRoute(builder: (context) => SearchPage()));
+            //命名路由和传值
+            // Navigator.pushNamed(context, '/search');
+            Navigator.pushNamed(context, '/search', arguments: {"id": 20});
+          },
+          color: Theme.of(context).accentColor,
+          textTheme: ButtonTextTheme.primary),
+    );
   }
 }
