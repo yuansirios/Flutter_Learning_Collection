@@ -169,14 +169,14 @@ class _AppBardemoPageState extends State<AppBardemoPage>
     with SingleTickerProviderStateMixin {
   TabController _tabController;
   @override
-  void dispose() {
+  void dispose() {//生命周期函数
     _tabController.dispose();
     super.dispose();
   }
 
   void initState() {
     super.initState();
-    _tabController = new TabController(vsync: this, length: 3);
+    _tabController = TabController(vsync: this, length: 3);
   }
 
   @override

@@ -4,8 +4,8 @@ class SearchPage extends StatelessWidget {
   
   final arguments;
 
-  SearchPage({this.arguments});
-
+  SearchPage(Map<String, int> map, {this.arguments});
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
