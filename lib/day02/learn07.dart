@@ -1,16 +1,21 @@
-//页面布局 Paddiing Row Column Expanded组件详解
+//页面布局 - Paddiing Row Column Expanded组件详解
 
 import 'package:flutter/material.dart';
 
-class Learn07 extends StatelessWidget {
+class Demo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Demo5();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Paddiing等组件详解'),
+      ),
+      body: Content()
+    );
   }
 }
 
 //Padding组件
-class Demo1 extends StatelessWidget {
+class Content extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -56,7 +61,7 @@ class Demo1 extends StatelessWidget {
 }
 
 //Row水平布局组件
-class Demo2 extends StatelessWidget {
+class Content1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -102,7 +107,7 @@ class IconContainer extends StatelessWidget {
 }
 
 //Column垂直布局组件
-class Demo3 extends StatelessWidget {
+class Content2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -122,7 +127,7 @@ class Demo3 extends StatelessWidget {
 }
 
 //Expanded类似Web中的Flex布局
-class Demo4 extends StatelessWidget {
+class Content3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -146,7 +151,7 @@ class Demo4 extends StatelessWidget {
 }
 
 //实践
-class Demo5 extends StatelessWidget {
+class Content4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(

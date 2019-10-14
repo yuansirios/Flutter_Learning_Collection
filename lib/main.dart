@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'day03/learn13.dart';
+import 'day04/learn15.dart';
 
-void main() => runApp(Learn13());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(primarySwatch: Colors.blue),
-        home: Scaffold(
-          appBar: AppBar(
-            title: Text('Flutter'),
-          ),
-          // body: Learn11()
-        ));
+        home: Demo());
   }
 }

@@ -3,10 +3,15 @@
  */
 import 'package:flutter/material.dart';
 
-class Learn04 extends StatelessWidget {
+class Demo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Content2();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('ListView基础列表组件'),
+      ),
+      body: Content()
+    );
   }
 }
 

@@ -2,10 +2,15 @@
 import 'package:flutter/material.dart';
 import 'res/listData.dart';
 
-class Learn05 extends StatelessWidget {
+class Demo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Content();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('List动态列表(动态循环数据)'),
+      ),
+      body: Content()
+    );
   }
 }
 

@@ -1,17 +1,22 @@
 /**
- * 页面布局 页面布局Wrap组件
+ * 页面布局 - Wrap组件
  */
 
 import 'package:flutter/material.dart';
 
-class Learn10 extends StatelessWidget {
+class Demo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Demo();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Wrap组件'),
+      ),
+      body: Content()
+    );
   }
 }
 
-class Demo extends StatelessWidget {
+class Content extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

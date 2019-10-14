@@ -7,10 +7,15 @@ StatefulWidget是有状态组件，持有的状态可能在 widget 生命周期�
 
 import 'package:flutter/material.dart';
 
-class Learn11 extends StatelessWidget {
+class Demo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return DemoState();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('StatefulWidget组件'),
+      ),
+      body: DemoState()
+    );
   }
 }
 

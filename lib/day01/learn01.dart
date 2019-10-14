@@ -9,14 +9,19 @@
 
 import 'package:flutter/material.dart';
 
-class Learn01 extends StatelessWidget {
+class Demo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        "我是一个文本内容",
-        textDirection: TextDirection.ltr,
-        style: TextStyle(fontSize: 20.0, color: Colors.blue),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Scaffold组件'),
+      ),
+      body: Center(
+        child: Text(
+          "我是一个文本内容",
+          textDirection: TextDirection.ltr,
+          style: TextStyle(fontSize: 20.0, color: Colors.blue),
+        ),
       ),
     );
   }

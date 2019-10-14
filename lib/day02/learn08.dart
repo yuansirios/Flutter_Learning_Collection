@@ -1,16 +1,21 @@
-//页面布局 Stack层叠组件 Stack与Align  Stack与Positioned实现定位布局
+//页面布局 - Stack层叠组件 Stack与Align  Stack与Positioned实现定位布局
 
 import 'package:flutter/material.dart';
 
-class Learn08 extends StatelessWidget {
+class Demo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Demo2();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Stack层叠组件详解'),
+      ),
+      body: Content()
+    );
   }
 }
 
 //Stack 整体位置
-class Demo extends StatelessWidget {
+class Content extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -34,7 +39,7 @@ class Demo extends StatelessWidget {
 }
 
 //Stack Align 子元素位置
-class Demo1 extends StatelessWidget {
+class Content1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -66,7 +71,7 @@ class Demo1 extends StatelessWidget {
 }
 
 //Stack Positioned top|bottom|left|right 各位置设置
-class Demo2 extends StatelessWidget {
+class Content2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(

@@ -7,10 +7,15 @@
 
 import 'package:flutter/material.dart';
 
-class Learn03 extends StatelessWidget {
+class Demo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Content3();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('图片组件Image'),
+      ),
+      body: Content2()
+    );
   }
 }
 

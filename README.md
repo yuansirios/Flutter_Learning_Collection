@@ -21,3 +21,8 @@ Flutter自学资料整理，希望能给正在学习的你提供点帮助，有�
 1. BottomNavigationBar 自定义底部导航条、以及实现页面切换
 2. 普通路由、普通路由传值、命名路由、命名路由传值
 
+#### Day04
+1. 无状态组件传值、有状态组件传值
+2. 路由 pushReplacementNamed路由替换 、pushNamedAndRemoveUntil返回到根路由
+3. AppBar 自定义顶部导航按钮 图标、颜色 以及 TabBar 定义顶部 Tab 切换
+

@@ -3,15 +3,20 @@
 import 'package:flutter/material.dart';
 import 'res/listData.dart';
 
-class Learn06 extends StatelessWidget {
+class Demo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Demo3();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('GridView组件以及动态GridView'),
+      ),
+      body: Content()
+    );
   }
 }
 
 //示例1
-class Demo1 extends StatelessWidget {  
+class Content extends StatelessWidget {  
   @override
   Widget build(BuildContext context) {    
     return GridView.count(
@@ -38,7 +43,7 @@ class Demo1 extends StatelessWidget {
 }
 
 //示例2
-class Demo2 extends StatelessWidget {  
+class Content1 extends StatelessWidget {  
 
   List<Widget> _getListData() {
       List<Widget> list = new List();
@@ -71,7 +76,7 @@ class Demo2 extends StatelessWidget {
 }
 
 //GridView.count实现网格布局
-class Demo3 extends StatelessWidget {
+class Content2 extends StatelessWidget {
   List<Widget> _getData() {
     var tempList = listData.map((value) {
       return Container(
@@ -113,7 +118,7 @@ class Demo3 extends StatelessWidget {
 }
 
 //GridView.builder实现网格布局
-class Demo4 extends StatelessWidget {
+class Content3 extends StatelessWidget {
   Widget _getListData(context, index) {
     return Container(
       child: Column(

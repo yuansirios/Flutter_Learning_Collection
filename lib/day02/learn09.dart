@@ -1,18 +1,23 @@
 /**
- * 页面布局 Flutter AspectRatio、Card卡片组件
+ * 页面布局 - AspectRatio、Card卡片组件
  */
 import 'package:flutter/material.dart';
 import 'res/listData.dart';
 
-class Learn09 extends StatelessWidget {
+class Demo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Demo2();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('AspectRatio、Card卡片组件'),
+      ),
+      body: Content()
+    );
   }
 }
 
 //AspectRatio
-class Demo extends StatelessWidget {
+class Content extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -35,7 +40,7 @@ class Demo extends StatelessWidget {
 }
 
 //Card 是卡片组件块，内容可以由大多数类型的 Widget 构成，Card 具有圆角和阴影，这让它 看起来有立体感。
-class Demo1 extends StatelessWidget {
+class Content1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -103,7 +108,7 @@ class Demo1 extends StatelessWidget {
 }
 
 //Card组件实现一个图文列表布局
-class Demo2 extends StatelessWidget {
+class Content2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
