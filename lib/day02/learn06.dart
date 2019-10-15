@@ -1,4 +1,4 @@
-//GridView组件 以及动态GridView
+//GridView组件以及动态GridView
 
 import 'package:flutter/material.dart';
 import 'res/listData.dart';

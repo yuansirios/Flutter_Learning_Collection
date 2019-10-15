@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 
 import 'pages/Tabs.dart';
 
-class Learn12 extends StatelessWidget {
+class Demo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

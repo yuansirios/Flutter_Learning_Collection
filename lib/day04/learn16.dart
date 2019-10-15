@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'pages/Search.dart';
 
 /*
  * Drawer侧边栏、以及侧边栏内容布局
  */
+
+import 'package:flutter/material.dart';
+import 'pages/Search.dart';
 
 class Demo extends StatelessWidget {
   @override

@@ -26,11 +26,9 @@ class _DemoState extends State<Demo> {
                 });
               },
               activeColor: Colors.red,
-            )
+            ),
+            Text(this.flag ? "选中" : "未选中")
           ]),
-          Row(
-            children: <Widget>[Text(this.flag ? "选中" : "未选中")],
-          ),
           SizedBox(height: 40),
           Divider(),
           CheckboxListTile(
