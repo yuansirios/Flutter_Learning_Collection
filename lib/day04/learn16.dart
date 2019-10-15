@@ -97,7 +97,7 @@ class Content1 extends StatelessWidget {
               Navigator.of(context).pop();
               //跳转
               Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => SearchPage({"id":123})));
+            .push(MaterialPageRoute(builder: (context) => SearchPage()));
             },
           ),
           Divider(),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 /*
  * 按钮组件 RaisedButton、
@@ -10,8 +9,6 @@ import 'package:flutter/widgets.dart';
  */
 
 class Demo extends StatelessWidget {
-
-  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,8 +26,8 @@ class Demo extends StatelessWidget {
           padding: EdgeInsets.all(8),
           child: FloatingActionButton(
             child: Icon(Icons.add),
-            backgroundColor: this._currentIndex==1?Colors.red:Colors.yellow,
-            onPressed: (){
+            backgroundColor:Colors.yellow,
+            onPressed: () {
               // setStat
             },
           ),
@@ -94,18 +91,17 @@ class Content extends StatelessWidget {
               Container(
                 height: 80,
                 child: RaisedButton(
-                      child: Text('圆形按钮'),
-                      color: Colors.blue,
-                      textColor: Colors.white,
-                      //背景阴影
-                      elevation: 20,
-                      //点击颜色
-                      splashColor: Colors.red,
-                      shape:
-                          CircleBorder(side: BorderSide(color: Colors.white)),
-                      onPressed: () {
-                        print("圆形按钮");
-                      }),
+                    child: Text('圆形按钮'),
+                    color: Colors.blue,
+                    textColor: Colors.white,
+                    //背景阴影
+                    elevation: 20,
+                    //点击颜色
+                    splashColor: Colors.red,
+                    shape: CircleBorder(side: BorderSide(color: Colors.white)),
+                    onPressed: () {
+                      print("圆形按钮");
+                    }),
               ),
               Container(
                 child: FlatButton(
@@ -117,7 +113,6 @@ class Content extends StatelessWidget {
                   },
                 ),
               ),
-
             ],
           ),
           SizedBox(height: 40),
@@ -184,43 +179,44 @@ class Content extends StatelessWidget {
             ],
           ),
           Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                ButtonBar(
-                  children: <Widget>[
-
-                    RaisedButton(
-                      child: Text('登录'),
-                      color: Colors.blue,
-                      textColor: Colors.white,
-                      elevation: 20,
-                      onPressed: () {
-                        print("宽度高度");
-                      },
-                    ),
-                    RaisedButton(
-                      child: Text('注册'),
-                      color: Colors.blue,
-                      textColor: Colors.white,
-                      elevation: 20,
-                      onPressed: () {
-                        print("宽度高度");
-                      },
-                    ),
-                    MyButton(text: "自定义按钮",height: 60.0,width: 100.0,pressed: (){
-                      print('自定义按钮');
-                    })
-                    
-                  ],
-                )
-              ],
-            )
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              ButtonBar(
+                children: <Widget>[
+                  RaisedButton(
+                    child: Text('登录'),
+                    color: Colors.blue,
+                    textColor: Colors.white,
+                    elevation: 20,
+                    onPressed: () {
+                      print("宽度高度");
+                    },
+                  ),
+                  RaisedButton(
+                    child: Text('注册'),
+                    color: Colors.blue,
+                    textColor: Colors.white,
+                    elevation: 20,
+                    onPressed: () {
+                      print("宽度高度");
+                    },
+                  ),
+                  MyButton(
+                      text: "自定义按钮",
+                      height: 60.0,
+                      width: 100.0,
+                      pressed: () {
+                        print('自定义按钮');
+                      })
+                ],
+              )
+            ],
+          )
         ],
       ),
     );
   }
 }
-
 
 //自定义按钮组件
 class MyButton extends StatelessWidget {
@@ -228,7 +224,8 @@ class MyButton extends StatelessWidget {
   final pressed;
   final width;
   final height;
-  const MyButton({this.text='',this.pressed=null,this.width=80,this.height=30}) ;
+  const MyButton(
+      {this.text = '', this.pressed = null, this.width = 80, this.height = 30});
 
   @override
   Widget build(BuildContext context) {
@@ -237,7 +234,7 @@ class MyButton extends StatelessWidget {
       width: this.width,
       child: RaisedButton(
         child: Text(this.text),
-        onPressed:this.pressed ,
+        onPressed: this.pressed,
       ),
     );
   }

@@ -29,3 +29,7 @@ Flutter自学资料整理，希望能给正在学习的你提供点帮助，有�
 5. 按钮组件 RaisedButton、FlatButton、OutlineButton、IconButton、ButtonBar以及自定义按钮组件
 6. FloatingActionButton实现类似闲鱼App底部导航凸起按钮
 
+#### Day05
+1. Button、CheckBox、Radio、TextField组件
+2. 表单示例完善
+
