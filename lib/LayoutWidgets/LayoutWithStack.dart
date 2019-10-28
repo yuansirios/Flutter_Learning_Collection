@@ -10,7 +10,7 @@ class LayoutWithStack extends StatelessWidget {
       appBar: AppBar(
         title: Text('层叠布局 Stack、Positioned'),
       ),
-      body: _stackTest2(),
+      body: _stackTest(),
     );
   }
 
