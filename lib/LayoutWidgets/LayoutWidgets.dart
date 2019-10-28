@@ -2,6 +2,11 @@
  * 布局类组件
  */
 import 'package:flutter/material.dart';
+import 'LayoutWithRowAndColumn.dart';
+import 'LayoutWithFlex.dart';
+import 'LayoutWithFlow.dart';
+import 'LayoutWithStack.dart';
+import 'LayoutWithAlign.dart';
 
 class LayoutWidgets extends StatelessWidget {
 
@@ -25,11 +30,11 @@ class BaseListView extends StatelessWidget {
   }
 
   final List dataList = [
-    {"title": "线性布局（Row和Column）", "component": ""},
-    {"title": "弹性布局（Flex）", "component": ""},
-    {"title": "流式布局（Wrap、Flow）", "component": ""},
-    {"title": "层叠布局 (Stack、Positioned)", "component": ""},
-    {"title": "对齐与相对定位（Align）", "component": "TextFieldDemo()"}
+    {"title": "线性布局（Row和Column）", "component": LayoutWithRowAndColumn()},
+    {"title": "弹性布局（Flex）", "component": LayoutWithFlex()},
+    {"title": "流式布局（Wrap、Flow）", "component": LayoutWithFlow()},
+    {"title": "层叠布局 (Stack、Positioned)", "component": LayoutWithStack()},
+    {"title": "对齐与相对定位（Align）", "component": LayoutWithAlign()}
   ];
 
   List<Widget> _getListData(BuildContext context) {
