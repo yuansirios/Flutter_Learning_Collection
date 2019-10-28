@@ -1,26 +1,28 @@
 import 'package:flutter/material.dart';
 
-import 'day01/learn01.dart' as learn01;
-import 'day01/learn02.dart' as learn02;
-import 'day01/learn03.dart' as learn03;
-import 'day01/learn04.dart' as learn04;
-import 'day02/learn05.dart' as learn05;
-import 'day02/learn06.dart' as learn06;
-import 'day02/learn07.dart' as learn07;
-import 'day02/learn08.dart' as learn08;
-import 'day02/learn09.dart' as learn09;
-import 'day02/learn10.dart' as learn10;
-import 'day02/learn11.dart' as learn11;
-import 'day03/learn12.dart' as learn12;
-import 'day03/learn13.dart' as learn13;
-import 'day04/learn14.dart' as learn14;
-import 'day04/learn15.dart' as learn15;
-import 'day04/learn16.dart' as learn16;
-import 'day05/Button.dart'    as learn17;
-import 'day05/CheckBox.dart'  as learn18;
-import 'day05/Radio.dart'     as learn19;
-import 'day05/TextField.dart' as learn20;
-import 'day05/FormDemo.dart'  as learn21;
+import 'RootView/RootView.dart';
+
+import 'Learn/day01/learn01.dart' as learn01;
+import 'Learn/day01/learn02.dart' as learn02;
+import 'Learn/day01/learn03.dart' as learn03;
+import 'Learn/day01/learn04.dart' as learn04;
+import 'Learn/day02/learn05.dart' as learn05;
+import 'Learn/day02/learn06.dart' as learn06;
+import 'Learn/day02/learn07.dart' as learn07;
+import 'Learn/day02/learn08.dart' as learn08;
+import 'Learn/day02/learn09.dart' as learn09;
+import 'Learn/day02/learn10.dart' as learn10;
+import 'Learn/day02/learn11.dart' as learn11;
+import 'Learn/day03/learn12.dart' as learn12;
+import 'Learn/day03/learn13.dart' as learn13;
+import 'Learn/day04/learn14.dart' as learn14;
+import 'Learn/day04/learn15.dart' as learn15;
+import 'Learn/day04/learn16.dart' as learn16;
+import 'Learn/day05/Button.dart'    as learn17;
+import 'Learn/day05/CheckBox.dart'  as learn18;
+import 'Learn/day05/Radio.dart'     as learn19;
+import 'Learn/day05/TextField.dart' as learn20;
+import 'Learn/day05/FormDemo.dart'  as learn21;
 
 void main() => runApp(MyApp());
 
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primarySwatch: Colors.blue),
-        home: Content());
+        home: RootView());
   }
 }
 
