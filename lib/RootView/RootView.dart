@@ -4,6 +4,7 @@
 import 'package:flutter/material.dart';
 import '../BaseWidgets/BaseWidgets.dart';
 import '../LayoutWidgets/LayoutWidgets.dart';
+import '../ContainerWidgets/ContainerWidgets.dart';
 
 class RootView extends StatelessWidget {
   @override
@@ -29,7 +30,7 @@ class RootListView extends StatelessWidget {
   final List dataList = [
     {"title": "基础组件", "component": BaseWidgets()},
     {"title": "布局类组件", "component": LayoutWidgets()},
-    {"title": "容器类组件", "component": ""},
+    {"title": "容器类组件", "component": ContainerWidgets()},
     {"title": "可滚动组件", "component": ""},
     {"title": "功能型组价", "component": ""},
     {"title": "事件处理与通知", "component": ""},

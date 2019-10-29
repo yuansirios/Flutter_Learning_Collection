@@ -24,6 +24,8 @@ import 'Learn/day05/Radio.dart'     as learn19;
 import 'Learn/day05/TextField.dart' as learn20;
 import 'Learn/day05/FormDemo.dart'  as learn21;
 
+import 'ContainerWidgets/Routes/Routes.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -32,6 +34,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primarySwatch: Colors.blue),
+        onGenerateRoute: onGenerateRoute,
         home: RootView());
   }
 }
