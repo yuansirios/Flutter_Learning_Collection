@@ -6,6 +6,10 @@ import '../BaseWidgets/BaseWidgets.dart';
 import '../LayoutWidgets/LayoutWidgets.dart';
 import '../ContainerWidgets/ContainerWidgets.dart';
 import '../ScrollAbleWidgets/ScrollAbleWidgets.dart';
+import '../FunctionalWidgets/FunctionalWidgets.dart';
+import '../EventHandleWidgets/EventHandleWidgets.dart';
+import '../CustomerWidgets/CustomerWidgets.dart';
+import '../FileAndNetWidgets/FileAndNetWidgets.dart';
 
 class RootView extends StatelessWidget {
   @override
@@ -33,11 +37,11 @@ class RootListView extends StatelessWidget {
     {"title": "布局类组件", "component": LayoutWidgets()},
     {"title": "容器类组件", "component": ContainerWidgets()},
     {"title": "可滚动组件", "component": ScrollAbleWidgets()},
-    {"title": "功能型组价", "component": ""},
-    {"title": "事件处理与通知", "component": ""},
+    {"title": "功能型组价", "component": FunctionalWidgets()},
+    {"title": "事件处理与通知", "component": EventHandleWidgets()},
     {"title": "动画", "component": ""},
-    {"title": "自定义组件", "component": ""},
-    {"title": "文件操作与网络请求", "component": ""},
+    {"title": "自定义组件", "component": CustomerWidgets()},
+    {"title": "文件操作与网络请求", "component": FileAndNetWidgets()},
     {"title": "包与插件", "component": "learn10.Demo()"},
     {"title": "国际化", "component": ""},
     {"title": "核心原理", "component": ""}
