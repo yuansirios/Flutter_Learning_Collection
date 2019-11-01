@@ -3,6 +3,7 @@ import 'FileWidgets.dart';
 import 'HttpWidgets.dart';
 import 'DioWidgets.dart';
 import 'JsonToModel.dart';
+import 'DioCustomWidgets.dart';
 
 class FileAndNetWidgets extends StatefulWidget {
   @override
@@ -32,6 +33,7 @@ class BaseListView extends StatelessWidget {
     {"title": "文件操作", "component": FileWidgets()},
     {"title": "通过HttpClient发起HTTP请求", "component": HttpWidgets()},
     {"title": "Http请求-Dio http库", "component": DioWidgets()},
+    {"title": "Dio网络库封装", "component": DioCustomWidgets()},
     {"title": "Json转Dart Model类", "component": JsonToModel()},
   ];
 

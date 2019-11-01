@@ -28,6 +28,16 @@
 	<string>Main</string>
 	<key>io.flutter.embedded_views_preview</key>
     <string>YES</string>
+
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>NSPhotoLibraryUsageDescription</string>
+
+	<key>NSCameraUsageDescription</key>
+	<string>NSCameraUsageDescription</string>
+
+	<key>NSMicrophoneUsageDescription</key>
+	<string>NSMicrophoneUsageDescription</string>
+
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
