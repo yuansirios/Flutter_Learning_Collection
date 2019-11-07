@@ -1,8 +1,5 @@
 
 import 'dart:io';
-
-import 'package:dio/dio.dart';
-
 import 'DataHelper.dart';
 import 'HttpManager.dart';
 import 'Address.dart';
@@ -13,7 +10,7 @@ class Api {
     var params = DataHelper.getBaseMap();
     params['page'] = page;
     params['pageSize'] = pageSize;
-    return HttpManager.getInstance().post(Address.TEST_API, params);
+    return HttpManager.getInstance().get(Address.TEST_API, params);
   }
 
   //请求车辆列表

@@ -200,7 +200,7 @@ class MyButton extends StatelessWidget {
   final width;
   final height;
   const MyButton(
-      {this.text = '', this.pressed = null, this.width = 80, this.height = 30});
+      {this.text = '', this.pressed, this.width = 80, this.height = 30});
 
   @override
   Widget build(BuildContext context) {

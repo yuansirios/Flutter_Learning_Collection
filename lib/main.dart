@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'RootView/RootView.dart';
+import 'ContainerWidgets/Routes/Routes.dart';
 
 import 'Learn/day01/learn01.dart' as learn01;
 import 'Learn/day01/learn02.dart' as learn02;
@@ -23,8 +24,6 @@ import 'Learn/day05/CheckBox.dart'  as learn18;
 import 'Learn/day05/Radio.dart'     as learn19;
 import 'Learn/day05/TextField.dart' as learn20;
 import 'Learn/day05/FormDemo.dart'  as learn21;
-
-import 'ContainerWidgets/Routes/Routes.dart';
 
 void main() => runApp(MyApp());
 

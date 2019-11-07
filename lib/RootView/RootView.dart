@@ -10,6 +10,9 @@ import '../FunctionalWidgets/FunctionalWidgets.dart';
 import '../EventHandleWidgets/EventHandleWidgets.dart';
 import '../CustomerWidgets/CustomerWidgets.dart';
 import '../FileAndNetWidgets/FileAndNetWidgets.dart';
+import '../PracticeList/DioCustomWidgets.dart';
+
+import '../PracticeList/MoreEnvWidgets.dart';
 
 class RootView extends StatelessWidget {
   @override
@@ -44,7 +47,9 @@ class RootListView extends StatelessWidget {
     {"title": "文件操作与网络请求", "component": FileAndNetWidgets()},
     {"title": "包与插件", "component": "learn10.Demo()"},
     {"title": "国际化", "component": ""},
-    {"title": "核心原理", "component": ""}
+    {"title": "核心原理", "component": ""},
+    {"title": "Dio网络库封装（get、post、file上传）", "component": DioCustomWidgets()},
+    {"title": "多环境配置方案（开发，测试，生产）", "component": MoreEnvWidgets()}
   ];
 
   List<Widget> _getListData(BuildContext context) {
@@ -66,6 +71,15 @@ class RootListView extends StatelessWidget {
             Column(children: <Widget>[
               Text(
                 "--- 进阶篇 ---",
+                style: TextStyle(height: 3),
+              ),
+              Divider()
+            ]),
+
+            if (title == "Dio网络库封装（get、post、file上传）")
+            Column(children: <Widget>[
+              Text(
+                "--- 实战篇 ---",
                 style: TextStyle(height: 3),
               ),
               Divider()

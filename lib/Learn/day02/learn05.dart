@@ -16,12 +16,12 @@ class Demo extends StatelessWidget {
 
 //循环创建列表
 class Content extends StatelessWidget {
-  List list = List();
+  final List list = List();
   //效果一样
   // Content({Key key}) : super(key: key) {
   Content() {
     for (var i = 0; i < 20; i++) {
-      list.add("这是第${i}条数据");
+      list.add("这是第$i条数据");
     }
   }
   @override
@@ -89,7 +89,7 @@ class Content4 extends StatelessWidget {
     List<Widget> list = List();
     for (int i = 0; i < 30; i++) {
       list.add(ListTile(
-        title: Text("第${i}行"),
+        title: Text("第$i行"),
       ));
     }
     return list;

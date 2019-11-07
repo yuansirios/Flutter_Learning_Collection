@@ -85,13 +85,11 @@ class Content1 extends StatelessWidget {
 }
 
 class IconContainer extends StatelessWidget {
-  double size;
-  IconData icon;
-  Color color;
+  final double size = 32.0;
+  final IconData icon;
+  final Color color;
 
-  IconContainer(this.icon, {this.size, this.color = Colors.blue}) {
-    this.size = 32.0;
-  }
+  IconContainer(this.icon, {this.color = Colors.blue});
 
   @override
   Widget build(BuildContext context) {

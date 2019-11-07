@@ -14,7 +14,7 @@ final routes={
 };
 
 //固定写法
-var onGenerateRoute = (RouteSettings settings) {
+RouteFactory onGenerateRoute = (RouteSettings settings) {
       // 统一处理
       final String name = settings.name; 
       final Function pageContentBuilder = routes[name];
@@ -30,5 +30,7 @@ var onGenerateRoute = (RouteSettings settings) {
                   pageContentBuilder(context));
             return route;
         }
+      }else{
+        return null;
       }
 };

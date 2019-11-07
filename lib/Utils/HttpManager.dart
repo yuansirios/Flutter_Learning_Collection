@@ -1,6 +1,8 @@
 
 import 'package:dio/dio.dart';
 import 'Address.dart';
+import 'ResultData.dart';
+import 'Code.dart';
 import 'LogsInterceptors.dart';
 import 'ResponseInterceptors.dart';
 
@@ -64,31 +66,20 @@ class HttpManager {
     Response response;
     try {
       response = await _dio.get(url, queryParameters: params);
-    } on DioError catch (e) {
+    } catch (e) {
       return resultError(e);
     }
-
-    if (response.data is DioError) {
-      return resultError(response.data['code']);
-    }
-
     return response.data;
   }
 
   ///通用的POST请求
   post(url, params, {noTip = false}) async {
     Response response;
-
     try {
       response = await _dio.post(url, data: params);
-    } on DioError catch (e) {
+    } catch (e) {
       return resultError(e);
     }
-
-    if (response.data is DioError) {
-      return resultError(response.data['code']);
-    }
-
     return response.data;
   }
 
@@ -99,18 +90,15 @@ class HttpManager {
       MultipartFile m = await MultipartFile.fromFile(file.path,filename: "name.png");
       FormData formData = FormData.fromMap({"image": m});
       response = await _dio.post(url, data: formData);
-    } on DioError catch (e) {
+    } catch (e) {
       return resultError(e);
     }
-
-    if (response.data is DioError) {
-      return resultError(response.data['code']);
-    }
-
     return response.data;
   }
 
   resultError(DioError e) {
-    print("发现错误$e");
+    print("API发现错误:$e");
+    return ResultData("", false, Code.NO_NET,
+                 errMsg: "网络不通");
   }
 }

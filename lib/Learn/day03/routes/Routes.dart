@@ -9,7 +9,7 @@ final Map<String, Function> routes = {
   '/from': (context, {arguments}) => FormPage(arguments: arguments),
 };
 
-var onGenerateRoute = (RouteSettings settings) {
+RouteFactory onGenerateRoute = (RouteSettings settings) {
   // 统一处理
   final String name = settings.name;
   final Function pageContentBuilder = routes[name];
@@ -19,4 +19,5 @@ var onGenerateRoute = (RouteSettings settings) {
             pageContentBuilder(context, arguments: settings.arguments));
     return route;
   }
+  return null;
 };

@@ -39,6 +39,7 @@ class LayoutWithStack extends StatelessWidget {
     );
   }
 
+/*
   Widget _stackTest2() {
     return //通过ConstrainedBox来确保Stack占满屏幕
         ConstrainedBox(
@@ -62,5 +63,5 @@ class LayoutWithStack extends StatelessWidget {
         ],
       ),
     );
-  }
+  }*/
 }

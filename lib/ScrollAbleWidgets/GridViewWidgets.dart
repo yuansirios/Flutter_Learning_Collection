@@ -10,6 +10,7 @@ class _GridViewWidgetsState extends State<GridViewWidgets> {
 
   @override
   void initState() {
+    super.initState();
     // 初始化数据
     _retrieveIcons();
   }
