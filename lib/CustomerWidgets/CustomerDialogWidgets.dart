@@ -38,7 +38,7 @@ class CustomerDialogWidgets extends StatelessWidget {
   _loadAlertDialog() {
     YSDialog.showAlert(
         "我是标题",
-        "我是内容",
+        "我是内容内容内容内容内容",
         (int index) {
       print("点击了：$index");
     });

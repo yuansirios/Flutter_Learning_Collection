@@ -11,6 +11,8 @@ import '../EventHandleWidgets/EventHandleWidgets.dart';
 import '../CustomerWidgets/CustomerWidgets.dart';
 import '../FileAndNetWidgets/FileAndNetWidgets.dart';
 
+import '../Learn/LearnList.dart';
+
 import '../PracticeList/DioCustomWidgets.dart';
 import '../PracticeList/MoreEnvWidgets.dart';
 import '../PracticeList/ListLoadMore.dart';
@@ -37,11 +39,13 @@ class RootListView extends StatelessWidget {
   }
 
   final List dataList = [
+    //入门篇
     {"title": "基础组件", "component": BaseWidgets()},
     {"title": "布局类组件", "component": LayoutWidgets()},
     {"title": "容器类组件", "component": ContainerWidgets()},
     {"title": "可滚动组件", "component": ScrollAbleWidgets()},
     {"title": "功能型组价", "component": FunctionalWidgets()},
+    //进阶篇
     {"title": "事件处理与通知", "component": EventHandleWidgets()},
     {"title": "动画", "component": ""},
     {"title": "自定义组件", "component": CustomerWidgets()},
@@ -49,6 +53,9 @@ class RootListView extends StatelessWidget {
     {"title": "包与插件", "component": "learn10.Demo()"},
     {"title": "国际化", "component": ""},
     {"title": "核心原理", "component": ""},
+    //学习篇
+    {"title": "学习列表", "component": LearnList()},
+    //实战篇
     {"title": "Dio网络库封装（get、post、file上传）", "component": DioCustomWidgets()},
     {"title": "多环境配置方案（开发，测试，生产）", "component": MoreEnvWidgets()},
     {"title": "列表下拉刷新+分页加载", "component": ListLoadMore()}
@@ -69,6 +76,16 @@ class RootListView extends StatelessWidget {
               ),
               Divider()
             ]),
+
+            if (title == "学习列表")
+            Column(children: <Widget>[
+              Text(
+                "--- 学习篇 ---",
+                style: TextStyle(height: 3),
+              ),
+              Divider()
+            ]),
+
             if (title == "事件处理与通知")
             Column(children: <Widget>[
               Text(

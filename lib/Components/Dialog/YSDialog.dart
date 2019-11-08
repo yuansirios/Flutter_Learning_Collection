@@ -71,6 +71,14 @@ class YSDialog extends Dialog {
     dismiss();
   }
 
+  //显示loading弹框
+  static showBottomSheet(String title) async {
+
+
+    await Future.delayed(Duration(milliseconds: 2000));
+    dismiss();
+  }
+
   //关闭弹框
   static dismiss() {
     Navigator.pop(currentContext);
@@ -155,6 +163,7 @@ class YSDialog extends Dialog {
                               child: Text(
                             message,
                             style: TextStyle(fontSize: 16),
+                            textAlign: TextAlign.center,
                             softWrap: true,
                           ))))),
                   ConstrainedBox(
@@ -165,7 +174,7 @@ class YSDialog extends Dialog {
                         children: <Widget>[
                           Divider(
                             height: 3,
-                            color: Colors.red,
+                            color: Colors.grey,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -179,7 +188,7 @@ class YSDialog extends Dialog {
                               Container(
                                 width: 1,
                                 height: 50,
-                                color: Colors.red,
+                                color: Colors.grey,
                               ),
                               Container(
                                 width: 100,

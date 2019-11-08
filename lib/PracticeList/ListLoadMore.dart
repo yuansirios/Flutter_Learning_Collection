@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import '../Components/YSToast.dart';
-import '../Components/Dialog/LoadingDialog.dart';
+import '../Components/Dialog/YSDialog.dart';
 
 class ListLoadMore extends StatefulWidget {
   @override
@@ -17,14 +17,14 @@ class _ListLoadMoreState extends State<ListLoadMore> {
       RefreshController(initialRefresh: false);
 
   void _onRefresh() async {
-    LoadingDialog.showLoading("正在加载数据正在加载数据正在加载数据");
+    YSDialog.showLoading("正在加载数据");
     // monitor network fetch
     await Future.delayed(Duration(milliseconds: 1000));
     _refreshController.refreshCompleted();
 
     items = ["1", "2", "3", "4", "5", "6", "7", "8"];
 
-    LoadingDialog.dismiss();
+    YSDialog.dismiss();
 
     checkSource();
   }
@@ -67,7 +67,7 @@ class _ListLoadMoreState extends State<ListLoadMore> {
   @override
   Widget build(BuildContext context) {
     
-    LoadingDialog.init(context);
+    YSDialog.init(context);
 
     return Scaffold(
       appBar: AppBar(
