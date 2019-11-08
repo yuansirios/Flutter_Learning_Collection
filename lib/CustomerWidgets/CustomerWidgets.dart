@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'GradientButtonWidgets.dart';
 import 'TurnBoxWidgets.dart';
 import 'CustomPaintRoute.dart';
+import 'CustomerDialogWidgets.dart';
 
 class CustomerWidgets extends StatefulWidget {
   @override
@@ -31,7 +32,8 @@ class BaseListView extends StatelessWidget {
   final List dataList = [
     {"title": "组合现有组件", "component": GradientButtonWidgets()},
     {"title": "组合实例：TurnBox", "component": TurnBoxRoute()},
-    {"title": "自绘组件 （CustomPaint与Canvas）", "component": CustomPaintRoute()}
+    {"title": "自绘组件 （CustomPaint与Canvas）", "component": CustomPaintRoute()},
+    {"title": "自定义弹框", "component": CustomerDialogWidgets()}
   ];
 
   List<Widget> _getListData(BuildContext context) {

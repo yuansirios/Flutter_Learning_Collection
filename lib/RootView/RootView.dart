@@ -10,9 +10,10 @@ import '../FunctionalWidgets/FunctionalWidgets.dart';
 import '../EventHandleWidgets/EventHandleWidgets.dart';
 import '../CustomerWidgets/CustomerWidgets.dart';
 import '../FileAndNetWidgets/FileAndNetWidgets.dart';
-import '../PracticeList/DioCustomWidgets.dart';
 
+import '../PracticeList/DioCustomWidgets.dart';
 import '../PracticeList/MoreEnvWidgets.dart';
+import '../PracticeList/ListLoadMore.dart';
 
 class RootView extends StatelessWidget {
   @override
@@ -49,7 +50,8 @@ class RootListView extends StatelessWidget {
     {"title": "国际化", "component": ""},
     {"title": "核心原理", "component": ""},
     {"title": "Dio网络库封装（get、post、file上传）", "component": DioCustomWidgets()},
-    {"title": "多环境配置方案（开发，测试，生产）", "component": MoreEnvWidgets()}
+    {"title": "多环境配置方案（开发，测试，生产）", "component": MoreEnvWidgets()},
+    {"title": "列表下拉刷新+分页加载", "component": ListLoadMore()}
   ];
 
   List<Widget> _getListData(BuildContext context) {
