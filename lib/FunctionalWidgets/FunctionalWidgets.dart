@@ -4,6 +4,8 @@ import 'WillPopScopeWidgets.dart';
 import 'InheritedWidgets.dart';
 import 'FutureWidgets.dart';
 import 'AlertDialogWidgets.dart';
+import 'TimerWidgets.dart';
+import 'ImagePickWidgets.dart';
 
 class FunctionalWidgets extends StatelessWidget {
 
@@ -31,6 +33,8 @@ class BaseListView extends StatelessWidget {
     {"title": "数据共享（InheritedWidget）", "component": InheritedWidgets()},
     {"title": "异步UI更新（FutureBuilder、StreamBuilder）", "component": FutureWidgets()},
     {"title": "对话框详解", "component": AlertDialogWidgets()},
+    {"title": "定时器详解", "component": TimerWidgets()},
+    {"title": "照片获取", "component": ImagePickWidgets()},
   ];
 
   List<Widget> _getListData(BuildContext context) {

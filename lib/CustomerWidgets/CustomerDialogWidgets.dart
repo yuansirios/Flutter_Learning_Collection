@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import '../Components/Dialog/YSDialog.dart';
+import '../Components/Dialog/YSBottomSheet.dart';
 
 class CustomerDialogWidgets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     YSDialog.init(context);
+    YSBottomSheet.init(context);
 
     return Scaffold(
         appBar: AppBar(
@@ -24,6 +26,7 @@ class CustomerDialogWidgets extends StatelessWidget {
                   child: Text("自定义Toast弹框"), onPressed: _loadToastDialog),
               RaisedButton(
                   child: Text("Toast弹框内容很多"), onPressed: _loadToastDialogMore),
+              RaisedButton(child: Text("底部弹框"), onPressed: _loadBottomDialog),
             ],
           ),
         )));
@@ -36,10 +39,7 @@ class CustomerDialogWidgets extends StatelessWidget {
   }
 
   _loadAlertDialog() {
-    YSDialog.showAlert(
-        "我是标题",
-        "我是内容内容内容内容内容",
-        (int index) {
+    YSDialog.showAlert("我是标题", "我是内容内容内容内容内容", (int index) {
       print("点击了：$index");
     });
   }
@@ -58,6 +58,13 @@ class CustomerDialogWidgets extends StatelessWidget {
   }
 
   _loadToastDialogMore() {
-    YSDialog.showToast("我是一个toast我是一个toast我是一个toast我是一个toast我是一个toas一个toast我是一个toast我是一个toast我是一个toast我是一个toas一个toast我是一个toast我是一个toast我是一个toast我是一个toas一个toast我是一个toast我是一个toast我是一个toast我是一个toas一个toast我是一个toast我是一个toast我是一个toast我是一个toas一个toast我是一个toast我是一个toast我是一个toast我是一个toas一个toast我是一个toast我是一个toast我是一个toast我是一个toas一个toast我是一个toast我是一个toast我是一个toast我是一个toas一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast");
+    YSDialog.showToast(
+        "我是一个toast我是一个toast我是一个toast我是一个toast我是一个toas一个toast我是一个toast我是一个toast我是一个toast我是一个toas一个toast我是一个toast我是一个toast我是一个toast我是一个toas一个toast我是一个toast我是一个toast我是一个toast我是一个toas一个toast我是一个toast我是一个toast我是一个toast我是一个toas一个toast我是一个toast我是一个toast我是一个toast我是一个toas一个toast我是一个toast我是一个toast我是一个toast我是一个toas一个toast我是一个toast我是一个toast我是一个toast我是一个toas一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast我是一个toast");
+  }
+
+  _loadBottomDialog() {
+    YSBottomSheet.showSheet(["拍照","相册"],(int index) {
+      print("点击了$index");
+    });
   }
 }

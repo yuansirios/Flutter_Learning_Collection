@@ -71,14 +71,6 @@ class YSDialog extends Dialog {
     dismiss();
   }
 
-  //显示loading弹框
-  static showBottomSheet(String title) async {
-
-
-    await Future.delayed(Duration(milliseconds: 2000));
-    dismiss();
-  }
-
   //关闭弹框
   static dismiss() {
     Navigator.pop(currentContext);
