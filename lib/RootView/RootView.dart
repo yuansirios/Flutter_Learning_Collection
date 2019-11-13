@@ -11,18 +11,23 @@ import '../EventHandleWidgets/EventHandleWidgets.dart';
 import '../CustomerWidgets/CustomerWidgets.dart';
 import '../FileAndNetWidgets/FileAndNetWidgets.dart';
 
+import '../AnimationWidgets/AnimationWidgets.dart';
+
 import '../Learn/LearnList.dart';
 
 import '../PracticeList/DioCustomWidgets.dart';
 import '../PracticeList/MoreEnvWidgets.dart';
 import '../PracticeList/ListLoadMore.dart';
 
+import '../LocalTranslations/LocalTranslations.dart';
+import '../Components/Local/Translations.dart';
+
 class RootView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter'),
+        title: Text(Translations.of(context).text('main_title')),
       ),
       body: RootListView(),
     );
@@ -47,11 +52,11 @@ class RootListView extends StatelessWidget {
     {"title": "功能型组价", "component": FunctionalWidgets()},
     //进阶篇
     {"title": "事件处理与通知", "component": EventHandleWidgets()},
-    {"title": "动画", "component": ""},
+    {"title": "动画", "component": AnimationWidgets()},
     {"title": "自定义组件", "component": CustomerWidgets()},
     {"title": "文件操作与网络请求", "component": FileAndNetWidgets()},
-    {"title": "包与插件", "component": "learn10.Demo()"},
-    {"title": "国际化", "component": ""},
+    {"title": "包与插件", "component": "l"},
+    {"title": "国际化", "component": LocalTranslations()},
     {"title": "核心原理", "component": ""},
     //学习篇
     {"title": "学习列表", "component": LearnList()},

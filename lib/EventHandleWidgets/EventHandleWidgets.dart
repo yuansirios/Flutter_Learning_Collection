@@ -1,8 +1,24 @@
 import 'package:flutter/material.dart';
 import 'GestureDetectorWidgets.dart';
 import 'NotificationWidgets.dart';
+import 'EventBusWidgets.dart';
+import '../Components/EventBus.dart';
 
-class EventHandleWidgets extends StatelessWidget {
+class EventHandleWidgets extends StatefulWidget {
+  @override
+  _EventHandleWidgetsState createState() => _EventHandleWidgetsState();
+}
+
+class _EventHandleWidgetsState extends State<EventHandleWidgets> {
+
+  void initState(){
+    super.initState();
+    //测试总线监听
+    bus.on("login", (arg) {
+      print("EventHandleWidgets 收到了消息：$arg");
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,6 +41,7 @@ class BaseListView extends StatelessWidget {
   final List dataList = [
     {"title": "手势识别", "component": GestureDetectorWidgets()},
     {"title": "Notification", "component": NotificationWidgets()},
+    {"title": "全局事件总线", "component": EventBusWidgets()},
   ];
 
   List<Widget> _getListData(BuildContext context) {

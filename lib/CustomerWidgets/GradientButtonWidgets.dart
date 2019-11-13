@@ -10,7 +10,7 @@ class _GradientButtonRouteState extends State<GradientButtonWidgets> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Title'),
+          title: Text('组合现有组件'),
         ),
         body: Container(
           child: Column(
