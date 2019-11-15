@@ -63,7 +63,7 @@ class RootListView extends StatelessWidget {
     //实战篇
     {"title": "Dio网络库封装（get、post、file上传）", "component": DioCustomWidgets()},
     {"title": "多环境配置方案（开发，测试，生产）", "component": MoreEnvWidgets()},
-    {"title": "列表下拉刷新+分页加载", "component": ListLoadMore()}
+    {"title": "列表下拉刷新+分页加载", "component": ListLoadMore()},
   ];
 
   List<Widget> _getListData(BuildContext context) {

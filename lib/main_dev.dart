@@ -53,8 +53,10 @@ class _MyAppState extends State<MyApp> {
       onGenerateRoute: onGenerateRoute,
       //国际化配置
       localizationsDelegates: [
-        _localeOverrideDelegate,  // 注册一个新的delegate
-        const TranslationsDelegate(), // 指向默认的处理翻译逻辑的库
+        // 注册一个新的delegate
+        _localeOverrideDelegate,  
+        // 指向默认的处理翻译逻辑的库
+        const TranslationsDelegate(), 
         // 本地化的代理类
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
