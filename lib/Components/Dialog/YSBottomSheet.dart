@@ -13,7 +13,8 @@ class YSBottomSheet {
     showModalBottomSheet(
         context: currentContext,
         builder: (BuildContext context) {
-          return Container(
+          return SafeArea(
+              child: Container(
             color: Colors.white,
             child: GestureDetector(
               child: BottomModal(
@@ -21,7 +22,7 @@ class YSBottomSheet {
                 clickBlock: clickBlock,
               ),
             ),
-          );
+          ));
         });
   }
 }
@@ -58,7 +59,7 @@ class _BottomModalState extends State {
         ),
         onTap: () {
           Navigator.of(context).pop();
-          _itemClick(i+1);
+          _itemClick(i + 1);
         },
       );
 
@@ -80,7 +81,7 @@ class _BottomModalState extends State {
       ),
       onTap: () {
         Navigator.of(context).pop();
-        _itemClick(this.itemArr.length+1);
+        _itemClick(this.itemArr.length + 1);
       },
     );
 
@@ -92,14 +93,12 @@ class _BottomModalState extends State {
 
   @override
   Widget build(BuildContext context) {
-
     int allH = (itemArr.length + 1) * 50 + 10;
     return Container(
       height: allH.toDouble(),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: _itemList()
-      ),
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: _itemList()),
     );
   }
 

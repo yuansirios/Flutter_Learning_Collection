@@ -37,9 +37,12 @@ class YSListView extends StatelessWidget {
         appBar: AppBar(
           title: Text(Translations.of(context).text('main_title')),
         ),
-        body: ListView(
-          children: _getListData(context),
-        ));
+        body: SafeArea(
+          child: ListView(
+            children: _getListData(context),
+          ),
+        )
+    );
   }
 
   // 数据源
