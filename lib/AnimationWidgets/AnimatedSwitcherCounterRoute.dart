@@ -32,7 +32,7 @@ class _AnimatedSwitcherCounterRouteState
                 AnimatedSwitcher(
   duration: Duration(milliseconds: 200),
   transitionBuilder: (Widget child, Animation<double> animation) {
-    var tween=Tween<Offset>(begin: Offset(1, 0), end: Offset(0, 0));
+    //var tween=Tween<Offset>(begin: Offset(1, 0), end: Offset(0, 0));
     return SlideTransitionX(
               child: child,
                        direction: AxisDirection.down, //上入下出

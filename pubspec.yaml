@@ -32,6 +32,7 @@ dependencies:
   path_provider: ^1.4.0
   pull_to_refresh: ^1.5.7
   json_serializable: ^2.0.0
+  flutter_screenutil: ^0.7.0
 
   #多语言
   flutter_localizations:
